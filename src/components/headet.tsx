@@ -1,5 +1,5 @@
 import logoImg from "../assets/logo.svg";
-import arrowDown from "../assets/icon-arrow-down.svg";
+import FontList from "./FontList";
 import { useState } from "react";
 
 interface headerProps {
@@ -11,42 +11,31 @@ const Header = ({ check, setCheck }: headerProps): JSX.Element => {
   const chnageColor = (): void => {
     setCheck(!check);
   };
-
+  const [chooseFont, setChooseFont] = useState<boolean>(false);
+  const showHide = (): void => {
+    setChooseFont(!chooseFont);
+  };
   return (
     <div className="w-full flex justify-between items-center">
       <img src={logoImg} alt=" logo " />
 
       <div className="flex gap-[16px]">
-        <div className="flex gap-[16px] items-center">
-          <h5
-            className={` font-bold text-[18px] leading-6 ${
-              check ? "text-[2D2D2D]" : "text-white"
-            }`}
-          >
-            Sans serif
-          </h5>
-
-          <img src={arrowDown} alt="Arrow down" />
-        </div>
+        <FontList check={check} />
 
         <hr className=" border-none w-[1px] h-[32px] bg-[#E9E9E9]" />
 
         <div className="flex items-center justify-center gap-[20px]">
           <label
-            className={` w-[40px] h-[20px] appearence-none outline-none ${
-              check ? "bg-[#757575] " : "bg-[#A445ED]"
-            } rounded-[10px] relative `}
+            className={`tablet:ml-[1.625rem] relative inline-block w-[40px] h-[20px] ${
+              check ? "bg-[#757575]" : "bg-[#A445ED]"
+            } rounded-[10px]`}
           >
             <input
+              className="peer opacity-0 w-0 h-0"
               type="checkbox"
-              className="w-0 h-0 opacity-0"
               onClick={chnageColor}
             />
-            <span
-              className="sspan absolute cursor-pointer right-0 top-0 left-0 bottom-0 rounded-[10px]
-           transition duration-400 sm:transition-none after:absolute after:content-'' after:h-[16px] after:w-[16px]
-            after:rounded-full after:left-[3px] after:bottom-[2.5px]  after:bg-white after:transition after:duration-400 after:sm:transition-none"
-            ></span>
+            <span className="absolute cursor-pointer inset-0 rounded-[10px] bg-gray dark:bg-purple before:absolute before:content-[''] before:h-[14px] before:w-[14px] before:rounded-full before:left-[3px] before:bottom-[3px] before:bg-white peer-focus-visible:bg-violet-500 peer-checked:before:translate-x-[20px] before:transition-all"></span>
           </label>
 
           <svg
