@@ -17,3 +17,16 @@ body {
   width: 100%;
   min-height: 100vh;
 }
+
+.sspan ::before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 6px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
