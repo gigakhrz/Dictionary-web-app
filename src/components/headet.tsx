@@ -5,22 +5,33 @@ import { useState } from "react";
 interface headerProps {
   check: boolean;
   setCheck: (check: boolean) => void;
+  switchFont: number;
+  setSwitchFont(switchFont: number): void;
 }
 
-const Header = ({ check, setCheck }: headerProps): JSX.Element => {
+const Header = ({
+  check,
+  setCheck,
+  switchFont,
+  setSwitchFont,
+}: headerProps): JSX.Element => {
   const chnageColor = (): void => {
     setCheck(!check);
   };
   const [chooseFont, setChooseFont] = useState<boolean>(false);
-  const showHide = (): void => {
-    setChooseFont(!chooseFont);
-  };
+
   return (
     <div className="w-full flex justify-between items-center">
-      <img src={logoImg} alt=" logo " />
+      <img className="w-[28px] h-[32px]" src={logoImg} alt=" logo " />
 
       <div className="flex gap-[16px]">
-        <FontList check={check} />
+        <FontList
+          check={check}
+          chooseFont={chooseFont}
+          setChooseFont={setChooseFont}
+          switchFont={switchFont}
+          setSwitchFont={setSwitchFont}
+        />
 
         <hr className=" border-none w-[1px] h-[32px] bg-[#E9E9E9]" />
 
