@@ -18,7 +18,7 @@ const Result = ({
     const getWord = async () => {
       try {
         const response = await axios.get(
-          "https://api.dictionaryapi.dev/api/v2/entries/en/${search}"
+          `https://api.dictionaryapi.dev/api/v2/entries/en/${search}`
         );
         const data = response.data;
         setWordInfo(data);
