@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Header from "./components/headet";
+import Search from "./components/Search";
 
 function App(): JSX.Element {
   const [check, setCheck] = useState<boolean>(true);
   const [switchFont, setSwitchFont] = useState<number>(1);
-
+  const [search, setSearch] = useState<string | null>(null);
+  console.log(search);
   return (
     <div
       className={`${
@@ -23,6 +25,7 @@ function App(): JSX.Element {
         switchFont={switchFont}
         setSwitchFont={setSwitchFont}
       />
+      <Search check={check} setSearch={setSearch} />
     </div>
   );
 }
