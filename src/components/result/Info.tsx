@@ -14,11 +14,11 @@ const Info = ({ wordInfo, check, switchFont }: InfoProps): JSX.Element => {
         return (
           <div
             key={index}
-            className="flex flex-col gap-[31px] items-start w-full"
+            className="flex flex-col gap-[31px] items-start w-full md:gap-10"
           >
             <div className="flex gap-[25px]  w-full items-center">
               <h3
-                className={`text-[18px] leading-[23px]  ${
+                className={`text-[18px] leading-[23px] md:text-[24px] md:leading-[29px] ${
                   check ? "text-[#2D2D2D]" : "text-white"
                 } text-[18px] leading-[23px] ${
                   switchFont === 1 ? "italic" : switchFont === 2 ? "italic" : ""
@@ -35,7 +35,7 @@ const Info = ({ wordInfo, check, switchFont }: InfoProps): JSX.Element => {
 
             <div className="flex flex-col gap-[13px] w-full">
               <h4
-                className={`text-[#757575] text-[16px] leading-[19.3px] mb-1`}
+                className={`text-[#757575] text-[16px] leading-[19.3px] mb-1 md:-[11px] md:text-[20px] md:leading-[25.5px]`}
               >
                 Meaning
               </h4>
@@ -50,7 +50,7 @@ const Info = ({ wordInfo, check, switchFont }: InfoProps): JSX.Element => {
                         <p
                           className={`  ${
                             check ? "text-[#2D2D2D]" : "text-white"
-                          } text-[15px] leading-6 font-normal`}
+                          } text-[15px] leading-6 font-normal md:text-[18px]`}
                         >
                           {definiton?.definition}
                         </p>
@@ -74,16 +74,16 @@ const Info = ({ wordInfo, check, switchFont }: InfoProps): JSX.Element => {
                   }`}
                 >
                   <h4
-                    className={` text-[#757575] font-normal text-[16px] leading-[19.3px] mb-1`}
+                    className={` text-[#757575] font-normal text-[16px] leading-[19.3px] mb-1 md:text-[20px] md:leading-[25.5px]`}
                   >
                     Synonyms
                   </h4>
 
                   {meaning?.synonyms?.map((synonym, index) => {
                     return (
-                      <div key={index} className="flex  gap-[10px]">
+                      <div key={index} className="flex  gap-[10px] ">
                         <h4
-                          className={`text-[#A445ED] font-bold text-[16px] leading-[19.3px] mb-1`}
+                          className={`text-[#A445ED] font-bold text-[16px] leading-[19.3px] md:text-[20px] md:leading-[25.5px] self-center`}
                         >
                           {synonym}
                         </h4>

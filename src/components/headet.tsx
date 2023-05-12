@@ -21,8 +21,12 @@ const Header = ({
   const [chooseFont, setChooseFont] = useState<boolean>(false);
 
   return (
-    <div className="w-full flex justify-between items-center">
-      <img className="w-[28px] h-[32px]" src={logoImg} alt=" logo " />
+    <div className="w-full flex justify-between items-center md:max-w-[737px]">
+      <img
+        className="w-[28px] h-[32px] md:w-[32px] md:h-[36.5px]"
+        src={logoImg}
+        alt=" logo "
+      />
 
       <div className="flex gap-[16px]">
         <FontList

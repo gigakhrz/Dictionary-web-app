@@ -44,7 +44,7 @@ const Result = ({
   return (
     <div className="w-full">
       {showResult === true ? (
-        <div className="flex flex-col gap-[28px] items-start w-full">
+        <div className="flex flex-col gap-[28px] items-start w-full md:gap-10 md:max-w-[737px]">
           <ResultHeader wordInfo={wordInfo} check={check} />
           <Info wordInfo={wordInfo} check={check} switchFont={switchFont} />
           <Source check={check} wordInfo={wordInfo} />

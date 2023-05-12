@@ -20,10 +20,12 @@ const Search = ({ check, setSearch }: searchProps): JSX.Element => {
   const [error, setError] = useState<boolean>(false);
 
   return (
-    <div className={`flex flex-col items-start gap-[8px]`}>
+    <div
+      className={`flex flex-col items-start gap-[8px] w-full md:max-w-[737px]`}
+    >
       <form
         onSubmit={inputValue}
-        className={`flex justify-center gap-[20px] items-center rounded-[16px] w-full h-[48px] px-4 py-[14px] ${
+        className={`flex justify-center gap-[20px] items-center rounded-[16px] w-full h-[48px] px-4 py-[14px] md:py-[22px] md:px-6 md:h-16 ${
           error ? "border-[1px] border-solid border-[#FF5252]" : "border-none"
         } ${check ? "bg-[#F4F4F4]" : "bg-[#1F1F1F]  "}`}
       >
@@ -32,7 +34,8 @@ const Search = ({ check, setSearch }: searchProps): JSX.Element => {
           type="search"
           id="search"
           placeholder="Search for any word…"
-          className={`w-full outline-none border-none font-bold text-[16px] leading-[19.36px] bg-none appearance-none placeholder:opacity-25 ${
+          className={`w-full outline-none border-none font-bold text-[16px] leading-[19.36px] bg-none appearance-none 
+          placeholder:opacity-25 md:text-5 md:leading-[21px] bg-transparent ${
             check ? "bg-[#F4F4F4] " : "bg-[#1F1F1F]"
           } ${check ? "text-[#2D2D2D]" : "text-white"} `}
         />

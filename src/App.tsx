@@ -18,7 +18,7 @@ function App(): JSX.Element {
           : switchFont === 2
           ? "font-lora"
           : "font-mono"
-      } flex flex-col gap-6 w-full min-h-screen px-6 pt-6 pb-[63px] ${
+      } flex flex-col items-center  gap-6 w-full min-h-screen px-6 pt-6 pb-[63px] md:gap-[51px] md:px-10 md:pt-[58px] md:pb-[118px]  lg:px-0 lg:pt-64px ${
         check ? "bg-white" : "bg-[#050505] "
       }`}
     >
