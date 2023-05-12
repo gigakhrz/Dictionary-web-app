@@ -62,37 +62,36 @@ const Info = ({ wordInfo, check, switchFont }: InfoProps): JSX.Element => {
                         </h4>
                       </div>
                     </div>
-
-                    {meaning.synonyms && meaning.synonyms.length > 0 && (
-                      <div
-                        className={` ${
-                          meaning.synonyms
-                            ? " flex gap-6 items-center w-full flex-wrap flex-row"
-                            : "hidden"
-                        }`}
-                      >
-                        <h4
-                          className={` text-[#757575] font-normal text-[16px] leading-[19.3px] mb-1`}
-                        >
-                          Synonyms
-                        </h4>
-
-                        {meaning?.synonyms?.map((synonym, index) => {
-                          return (
-                            <div key={index} className="flex  gap-[10px]">
-                              <h4
-                                className={`text-[#A445ED] font-bold text-[16px] leading-[19.3px] mb-1`}
-                              >
-                                {synonym}
-                              </h4>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    )}
                   </div>
                 );
               })}
+              {meaning.synonyms && meaning.synonyms.length > 0 && (
+                <div
+                  className={` ${
+                    meaning?.synonyms
+                      ? " flex gap-6 items-center w-full flex-wrap flex-row"
+                      : "hidden"
+                  }`}
+                >
+                  <h4
+                    className={` text-[#757575] font-normal text-[16px] leading-[19.3px] mb-1`}
+                  >
+                    Synonyms
+                  </h4>
+
+                  {meaning?.synonyms?.map((synonym, index) => {
+                    return (
+                      <div key={index} className="flex  gap-[10px]">
+                        <h4
+                          className={`text-[#A445ED] font-bold text-[16px] leading-[19.3px] mb-1`}
+                        >
+                          {synonym}
+                        </h4>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           </div>
         );
