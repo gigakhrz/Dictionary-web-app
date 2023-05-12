@@ -37,7 +37,10 @@ const Search = ({ check, setSearch }: searchProps): JSX.Element => {
           } ${check ? "text-[#2D2D2D]" : "text-white"} `}
         />
 
-        <img src={searchIcon} alt="search icon" />
+        <button className="w-4 h-4 decoration-none" type="submit">
+          {" "}
+          <img src={searchIcon} alt="search icon" />
+        </button>
       </form>
       <p
         className={`font-normal text-[16px] leading-[19.36px] text-[#FF5252] ${
