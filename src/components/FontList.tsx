@@ -34,7 +34,7 @@ const FontList = ({
           chooseFont ? "flex" : "hidden"
         } flex-col items-start p-6 gap-[16px] w-[183px] h-[152px] rounded-[16px] ${
           check ? "shadow-colorwhite" : "shadow-colorblack"
-        } absolute right-0 top-[40px]`}
+        } absolute right-0 top-[40px] bg-white`}
       >
         <h5
           onClick={() => {
