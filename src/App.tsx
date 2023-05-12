@@ -2,12 +2,13 @@ import { useState } from "react";
 import Header from "./components/headet";
 import Search from "./components/Search";
 import Result from "./components/Result";
+import { types } from "./type";
 
 function App(): JSX.Element {
   const [check, setCheck] = useState<boolean>(true);
   const [switchFont, setSwitchFont] = useState<number>(1);
-  const [search, setSearch] = useState<string | null>("");
-  const [wordInfo, setWordInfo] = useState<any>([]);
+  const [search, setSearch] = useState<string>("");
+  const [wordInfo, setWordInfo] = useState<types | null>(null);
 
   return (
     <div
@@ -28,7 +29,13 @@ function App(): JSX.Element {
         setSwitchFont={setSwitchFont}
       />
       <Search check={check} setSearch={setSearch} />
-      <Result wordInfo={wordInfo} setWordInfo={setWordInfo} search={search} />
+      <Result
+        wordInfo={wordInfo}
+        setWordInfo={setWordInfo}
+        search={search}
+        switchFont={switchFont}
+        check={check}
+      />
     </div>
   );
 }

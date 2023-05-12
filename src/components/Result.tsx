@@ -2,17 +2,22 @@ import Succes from "./result/Succes";
 import NoResult from "./result/NoResult";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { types } from "../type";
 
 interface resultProps {
-  wordInfo: any;
+  wordInfo: types | null;
   setWordInfo(wordInfo: any): void;
   search: null | string;
+  switchFont: number;
+  check: boolean;
 }
 
 const Result = ({
   wordInfo,
   setWordInfo,
   search,
+  switchFont,
+  check,
 }: resultProps): JSX.Element => {
   useEffect(() => {
     const getWord = async () => {
@@ -20,7 +25,7 @@ const Result = ({
         const response = await axios.get(
           `https://api.dictionaryapi.dev/api/v2/entries/en/${search}`
         );
-        const data = response.data;
+        const data = response.data[0];
         setWordInfo(data);
         setShowResult(true);
       } catch (error) {
@@ -35,10 +40,9 @@ const Result = ({
   const [showResult, setShowResult] = useState<boolean | null>(null);
 
   return (
-    <div>
-      {" "}
+    <div className="w-full">
       {showResult === true ? (
-        <Succes />
+        <Succes switchFont={switchFont} wordInfo={wordInfo} check={check} />
       ) : showResult === false ? (
         <NoResult />
       ) : null}

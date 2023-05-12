@@ -28,6 +28,7 @@ const Search = ({ check, setSearch }: searchProps): JSX.Element => {
         } ${check ? "bg-[#F4F4F4]" : "bg-[#1F1F1F]  "}`}
       >
         <input
+          autoComplete="off"
           type="search"
           id="search"
           placeholder="Search for any word…"
