@@ -26,7 +26,7 @@ const Search = ({ check, setSearch }: searchProps): JSX.Element => {
       <form
         onSubmit={inputValue}
         className={`flex justify-center hover:border-[1px] hover:border-[#A445ED] cursor-pointer  gap-[20px] items-center rounded-[16px] w-full h-[48px] px-4 py-[14px] md:py-[22px] md:px-6 md:h-16  ${
-          error ? "border-[1px] border-solid border-[#FF5252]" : "border-none"
+          error ? "border-[1px] border-solid border-[#FF5252]" : ""
         } ${check ? "bg-[#F4F4F4]" : "bg-[#1F1F1F]  "}`}
       >
         <input
