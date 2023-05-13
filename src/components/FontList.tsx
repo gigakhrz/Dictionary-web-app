@@ -20,14 +20,14 @@ const FontList = ({
   return (
     <div onClick={showHide} className="flex gap-[16px] items-center relative">
       <h5
-        className={` font-bold text-[18px] leading-6 ${
+        className={` font-bold text-[18px] leading-6 cursor-pointer ${
           check ? "text-[2D2D2D]" : "text-white"
         }`}
       >
         {switchFont === 1 ? "San-serif" : switchFont === 2 ? "Serif" : "Mono"}
       </h5>
 
-      <img src={arrowDown} alt="Arrow down" />
+      <img className="cursor-pointer " src={arrowDown} alt="Arrow down" />
 
       <div
         className={` ${
@@ -40,7 +40,7 @@ const FontList = ({
           onClick={() => {
             setSwitchFont(1);
           }}
-          className={` font-bold text-[18px] leading-6 ${
+          className={` font-bold text-[18px] leading-6 hover:text-[#A445ED] cursor-pointer ${
             check ? "text-[2D2D2D]" : "text-white"
           }`}
         >
@@ -51,7 +51,7 @@ const FontList = ({
           onClick={() => {
             setSwitchFont(2);
           }}
-          className={` font-bold text-[18px] leading-6 ${
+          className={` font-bold text-[18px] leading-6 hover:text-[#A445ED] cursor-pointer ${
             check ? "text-[2D2D2D]" : "text-white"
           }`}
         >
@@ -62,7 +62,7 @@ const FontList = ({
           onClick={() => {
             setSwitchFont(3);
           }}
-          className={` font-bold text-[18px] leading-6 ${
+          className={` font-bold text-[18px] leading-6 hover:text-[#A445ED] cursor-pointer ${
             check ? "text-[2D2D2D]" : "text-white"
           }`}
         >
