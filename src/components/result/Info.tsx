@@ -7,7 +7,6 @@ interface InfoProps {
 }
 
 const Info = ({ wordInfo, check, switchFont }: InfoProps): JSX.Element => {
-  console.log(wordInfo);
   return (
     <>
       {wordInfo?.meanings.map((meaning, index) => {
