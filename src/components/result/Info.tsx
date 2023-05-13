@@ -56,7 +56,7 @@ const Info = ({ wordInfo, check, switchFont }: InfoProps): JSX.Element => {
                         </p>
 
                         <h4
-                          className={`text-[#757575] text-[15px] leading-6] `}
+                          className={`text-[#757575] text-[15px] leading-6] md:text-[18px] leading-6`}
                         >
                           {definiton?.example && `"${definiton?.example}"`}
                         </h4>
