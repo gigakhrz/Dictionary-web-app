@@ -14,7 +14,7 @@ const Info = ({ wordInfo, check, switchFont }: InfoProps): JSX.Element => {
         return (
           <div
             key={index}
-            className="flex flex-col gap-[31px] items-start w-full md:gap-10"
+            className="flex flex-col gap-[31px] items-start w-full md:gap-10 md:max-w-[737px]"
           >
             <div className="flex gap-[25px]  w-full items-center">
               <h3

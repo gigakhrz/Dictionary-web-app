@@ -8,7 +8,7 @@ interface SoruceProps {
 
 const Source = ({ check, wordInfo }: SoruceProps): JSX.Element => {
   return (
-    <div className="flex flex-col items center w-full gap-6">
+    <div className="flex flex-col items center w-full gap-6 md:max-w-[737px]">
       <hr
         className={`border-none h-[1px] w-full ${
           check ? "bg-[#E9E9E9]" : "bg-[#3A3A3A]"

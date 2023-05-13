@@ -24,7 +24,7 @@ const ResultHeader = ({ wordInfo, check }: succesProps): JSX.Element => {
   };
   return (
     //   word infto and sound play icon div
-    <div className="flex justify-between items-start w-full">
+    <div className="flex justify-between items-start w-full md:max-w-[737px]">
       <div className="flex flex-col gap-[7px] items-start md:gap-[5px]">
         <h1
           className={`text-[32px] leading-[41px] font-bold  md:text-[64px] md:leading-[82px]  ${
