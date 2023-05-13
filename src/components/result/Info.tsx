@@ -83,7 +83,7 @@ const Info = ({ wordInfo, check, switchFont }: InfoProps): JSX.Element => {
                     return (
                       <div key={index} className="flex  gap-[10px] ">
                         <h4
-                          className={`text-[#A445ED] font-bold text-[16px] leading-[19.3px] md:text-[20px] md:leading-[25.5px] self-center`}
+                          className={`text-[#A445ED] font-bold text-[16px] leading-[19.3px] md:text-[20px] md:leading-[25.5px] self-center cursor-pointer hover:underline hover:underline-offset-8 decoration-1 `}
                         >
                           {synonym}
                         </h4>
