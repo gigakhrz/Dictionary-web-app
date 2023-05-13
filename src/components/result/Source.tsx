@@ -15,7 +15,7 @@ const Source = ({ check, wordInfo }: SoruceProps): JSX.Element => {
         }`}
       />
 
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col gap-2 w-full md:flex-row md:gap-[25px]">
         {" "}
         <h4
           className={`text-[#757575] text-[16px] leading-[19.3px] underline `}
