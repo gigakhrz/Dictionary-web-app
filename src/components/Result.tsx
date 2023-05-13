@@ -42,7 +42,7 @@ const Result = ({
   const [showResult, setShowResult] = useState<boolean | null>(null);
 
   return (
-    <div className="w-full">
+    <div className="w-full items-center flex flex-col">
       {showResult === true ? (
         <div className="flex flex-col gap-[28px] items-center w-full md:gap-10">
           <ResultHeader wordInfo={wordInfo} check={check} />
@@ -50,7 +50,7 @@ const Result = ({
           <Source check={check} wordInfo={wordInfo} />
         </div>
       ) : showResult === false ? (
-        <NoResult />
+        <NoResult check={check} />
       ) : null}
     </div>
   );
