@@ -32,7 +32,7 @@ const FontList = ({
       <div
         className={` ${
           chooseFont ? "flex" : "hidden"
-        } flex-col items-start p-6 gap-[16px] w-[183px] h-[152px] rounded-[16px] ${
+        } flex-col items-start p-6 gap-[16px] w-[183px] h-[152px] rounded-[16px]  z-10 ${
           check
             ? "shadow-colorwhite bg-white"
             : "shadow-colorblack bg-[#1F1F1F]"
