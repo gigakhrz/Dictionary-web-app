@@ -1,5 +1,4 @@
 import { types } from "../../type";
-import playImg from "../../assets/icon-play.svg";
 import { useRef } from "react";
 interface succesProps {
   wordInfo: types | null;
